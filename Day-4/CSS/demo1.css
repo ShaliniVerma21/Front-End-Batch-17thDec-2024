@@ -1,0 +1,73 @@
+/* Universal Selector*/
+
+*{
+    background-color: rgb(246, 240, 236);
+    margin: 15px;
+}
+
+h1{
+    color: blue;
+    text-align: center;
+}
+
+p,h3{
+    font-size: 18px;
+    color:black;
+}
+
+/*Class selector*/
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border: 5px double black;
+    display: inline-block;
+}
+
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color:red;
+    border: 5px double black;
+    display: inline-block;
+}
+
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color:yellow;
+    border: 5px double black;
+    display: inline-block;
+}
+
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 5px double black;
+    display: inline-block;
+}
+
+#box4{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(58, 250, 58);
+    border: 5px double black;
+    display: inline-block;
+}
+
+#box5{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(157, 235, 157);
+    border: 5px double black;
+    display: inline-block;
+}
+
+#box6{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 5px double black;
+    display: inline-block;
+}
