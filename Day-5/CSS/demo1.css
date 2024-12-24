@@ -1,0 +1,23 @@
+/*General Sibling selector (~)*/
+.container1 ~ .c1 {
+  background-color: yellow;
+}
+
+
+/*Adjacent Sibling selector (+)*/
+.container2 + .c2 {
+  background-color: rebeccapurple;
+}
+
+
+/*Child selector (>)*/
+.container3 > .c3 {
+  background-color: orange;
+}
+
+
+/*Descendant selector (space)*/
+.container4 .c4 {
+  background-color: green;
+}
+

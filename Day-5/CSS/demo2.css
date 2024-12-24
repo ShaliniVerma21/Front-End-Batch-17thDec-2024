@@ -1,0 +1,30 @@
+a{
+    margin: 20px;
+    font-size: 40px;
+    padding: 20px;
+}
+.container{
+    display: inline-flex;
+}
+.box{
+    height: 300px;
+    width: 300px;
+    margin: 5px;
+    background-color: ghostwhite;
+    border: 5px double black;
+    display: inline-block;
+}
+
+.div1{
+    height: 300px;
+    width: 300px;
+    margin: 5px;
+    background-color: ghostwhite;
+    border: 5px double black;
+    display: inline-block;
+}
+
+img{
+    border: 5px dotted black;
+    border-radius: 5px;
+}
