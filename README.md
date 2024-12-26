@@ -4,10 +4,10 @@
 
 
 
-📚 What You Will Learn
+# 📚 What You Will Learn
 
 
-1. HTML (HyperText Markup Language)
+# 1. HTML (HyperText Markup Language)
 
 ⚛ The backbone of every website! Learn to structure your web pages using semantic HTML tags and create accessible, SEO-friendly content. Topics include:
 
@@ -19,7 +19,7 @@
 
 
 
-2. CSS (Cascading Style Sheets)
+# 2. CSS (Cascading Style Sheets)
 
 🌟 Style your web pages like a pro! Master the art of designing visually appealing and responsive layouts. Topics include:
 
@@ -33,7 +33,7 @@
 
 
 
-3. JavaScript
+# 3. JavaScript
 
 🚀 Bring your websites to life with dynamic behavior and interactivity. Explore JavaScript fundamentals and advanced concepts, including:
 
@@ -47,7 +47,7 @@
 
 
 
-4. jQuery
+# 4. jQuery
 
 🔧 Simplify JavaScript development with the powerful jQuery library. Topics include:
 
@@ -61,7 +61,7 @@
 
 
 
-5. Bootstrap
+# 5. Bootstrap
 
 🛏️ Build professional and responsive designs effortlessly using Bootstrap. Topics include:
 
@@ -75,7 +75,7 @@
 
 
 
-6. ReactJS
+# 6. ReactJS
 
 🎨 Dive into modern web development with React, the most popular JavaScript library for building user interfaces. Topics include:
 
@@ -92,7 +92,7 @@
 
 
 
-🙌 Why Choose This Program?
+# 🙌 Why Choose This Program?
 
 🌟 Beginner-friendly: Start with the basics and progress to advanced topics.
 
@@ -105,7 +105,7 @@
 
 
 
-🚀 Who Is This For?
+# 🚀 Who Is This For?
 
 This course is perfect for:
 
@@ -118,7 +118,7 @@ This course is perfect for:
 
 
 
-🔄 Getting Started
+# 🔄 Getting Started
 
 Clone this repository:
 
@@ -133,7 +133,7 @@ Follow the instructions in the individual module folders to start learning.
 
 
 
-🎯 Course Roadmap
+# 🎯 Course Roadmap
 
 ✅ HTML Basics
 
@@ -157,7 +157,7 @@ Follow the instructions in the individual module folders to start learning.
 
 
 
-🌎 Join the Community
+# 🌎 Join the Community
 
 💬 Connect with peers and instructors on our Discord channel.
 
@@ -165,12 +165,12 @@ Follow the instructions in the individual module folders to start learning.
 
 
 
-✨ Contribute
+# ✨ Contribute
 
 Contributions to this repository are welcome! If you spot any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.
 
 
 
-🌟 Let’s Build the Future Together!
+# 🌟 Let’s Build the Future Together!
 
 Embark on this exciting journey to become a front-end development expert. By the end of this course, you’ll have the skills to create beautiful, functional, and responsive web applications from scratch. Let’s master the art of front-end development and shape the digital world! ✨
