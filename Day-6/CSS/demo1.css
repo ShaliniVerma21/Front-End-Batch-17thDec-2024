@@ -1,0 +1,106 @@
+/*header*/
+.Navbar
+{
+    background-color: aquamarine;
+    padding: 30px;
+    font-size: 40px;
+}
+a{
+    color: black;
+    margin: 20px;
+}
+
+/*footer*/
+.footer{
+    background-color: aquamarine;
+    padding: 50px;
+    font-size: 15px;
+}
+
+/*Content Styling*/
+
+h1{
+    color: blue;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#Section1{
+    background-color: #f2f2f2;
+    border: 5px double black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#i1{
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#Section2{
+    background-color: #f2f2f2;
+    border: 5px double black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#i2{
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#Section3{
+    background-color: #f2f2f2;
+    border: 5px double black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#i3{
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#Section4{
+    background-color: #f2f2f2;
+    border: 5px double black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#i4{
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#Section5{
+    background-color: #f2f2f2;
+    border: 5px double black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#i5{
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
