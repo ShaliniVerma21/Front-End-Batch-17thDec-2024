@@ -1,0 +1,87 @@
+<!--Example 2: Video Player with Custom Controls-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Custom Controls</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .video-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+        }
+        video {
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #000;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .progress {
+            flex-grow: 1;
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .volume-control {
+            width: 100px;
+            margin-left: 10px;
+        }
+        @media (max-width: 600px) {
+            video {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Video Player with Custom Controls</h1>
+<div class="video-container">
+    <video controls>
+        <source src="video/sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="controls">
+        <button class="button">Play</button>
+        <div class="progress"></div>
+        <button class="button">Full Screen</button>
+        <input type="range" class="volume-control" min="0" max="100" value="100" 
+        aria-label="Volume Control">
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!--Example 5: Audio with Visualizer (Using Canvas)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        canvas {
+            width: 100%;
+            max-width: 600px;
+            height: 200px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Audio Visualizer</h1>
+<audio id="audio" controls>
+    <source src="audio/song.mp3" type="audio /mpeg">
+    Your browser does not support the audio element.
+</audio>
+<canvas id="visualizer"></canvas>
+
+</body>
+</html>
