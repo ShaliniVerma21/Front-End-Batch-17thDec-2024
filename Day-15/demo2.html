@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .caption {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr; /* Stack images on small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Responsive Images Example</h1>
+    <div class="gallery">
+        <div>
+            <img src="./Images/i1.png" alt="A beautiful scenery of mountains">
+            <div class="caption">Mountains</div>
+        </div>
+        <div>
+            <img src="./Images/i2.png" alt="A serene beach view">
+            <div class="caption">Beach</div>
+        </div>
+        <div>
+            <img src="./Images/i3.png" alt="A vibrant city skyline">
+            <div class="caption">City Skyline</div>
+        </div>
+        <div>
+            <img src="./Images/i4.png" alt="A tranquil forest path">
+            <div class="caption">Forest Path</div>
+        </div>
+        <div>
+            <img src="./Images/i5.png" alt="A stunning sunset over the ocean">
+            <div class="caption">Sunset</div>
+        </div>
+        <div>
+            <img src="./Images/i1.png" alt="A field of blooming flowers">
+            <div class="caption">Flower Field</div>
+        </div>
+    </div>
+</body>
+
+</html>

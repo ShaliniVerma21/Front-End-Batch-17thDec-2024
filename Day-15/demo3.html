@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 4vw; /* Responsive font size for heading */
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 2vw; /* Responsive font size for paragraph */
+            line-height: 1.5;
+        }
+
+        nav {
+            margin: 20px 0;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 6vw; /* Larger font size for smaller screens */
+            }
+
+            p {
+                font-size: 4vw; /* Larger font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <h1>Responsive Text Example</h1>
+    <p>This text size adjusts based on the viewport width!</p>
+    <p>Resize the window to see how the text size changes dynamically.</p>
+</body>
+
+</html>

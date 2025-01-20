@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: lightblue;
+            transition: background-color 0.3s;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        nav {
+            margin: 20px 0;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            body {
+                background-color: lightcoral; /* Change background on small screens */
+            }
+
+            h1 {
+                font-size: 2em; /* Increase font size on small screens */
+            }
+
+            p {
+                font-size: 1.5em; /* Increase paragraph font size on small screens */
+            }
+        }
+
+        @media (max-width: 400px) {
+            body {
+                background-color: lightgreen; /* Change background on very small screens */
+            }
+
+            h1 {
+                font-size: 1.5em; /* Further decrease font size on very small screens */
+            }
+
+            p {
+                font-size: 1.2em; /* Further decrease paragraph font size on very small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <h1>Media Queries Example</h1>
+    <p>Resize the window to see the background color change!</p>
+</body>
+
+</html>
