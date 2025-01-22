@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Image Hover Overlay</title>
+    <style>
+        .overlay-gallery {
+            display: flex;
+            gap: 10px;
+        }
+
+        .overlay-item {
+            position: relative;
+            margin: 10px;
+        }
+
+        .overlay-item img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 8px;
+        }
+
+        .overlay-item:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay-gallery">
+        <div class="overlay-item">
+            <img src="image1.jpg" alt="Image 1">
+            <div class="overlay">View More</div>
+        </div>
+        <div class="overlay-item">
+            <img src="image2.jpg" alt="Image 2">
+            <div class="overlay">View More</div>
+        </div>
+    </div>
+</body>
+
+</html>

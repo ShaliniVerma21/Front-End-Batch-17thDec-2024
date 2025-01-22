@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Image Filtering</title>
+    <style>
+        .gallery img {
+            display: none;
+            /* Hide all images by default */
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .gallery img.show {
+            display: block;
+            /* Show images with the 'show' class */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filter-buttons">
+        <button data-filter="all">All</button>
+        <button data-filter="nature">Nature</button>
+        <button data-filter="architecture">Architecture</button>
+    </div>
+    <div class="gallery">
+        <img class="nature" src="./Image Styling/image/img2.jpg" alt="Nature 1">
+        <img class="architecture" src="./Image Styling/image/img2.jpg" alt="Architecture 1">
+        <img class="nature" src="./Image Styling/image/img2.jpg" alt="Nature 2">
+        <img class="architecture" src="./Image Styling/image/img2.jpg" alt="Architecture 2">
+    </div>
+</body>
+
+</html>
