@@ -1,0 +1,16 @@
+body{
+    background-color: beige;
+    margin: 10px;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+button{
+    color: blueviolet;
+}
+.card{
+    margin: 5px;
+    border-radius: 10px;
+}
