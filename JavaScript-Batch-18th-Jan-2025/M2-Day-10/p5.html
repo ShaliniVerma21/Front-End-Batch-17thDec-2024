@@ -1,0 +1,56 @@
+<!--Example 5: Image Carousel-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        #carousel {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        #carousel img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        #carousel img.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Carousel</h1>
+    <div id="carousel">
+        <img src="./Images/img1.png" class="active" alt="Image 1">
+        <img src="./Images/img2.png" alt="Image 2">
+        <img src="./Images/img3.png" alt="Image 3">
+    </div>
+    <button onclick="prevImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('#carousel img');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>

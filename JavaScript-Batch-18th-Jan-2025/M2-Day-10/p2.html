@@ -1,0 +1,41 @@
+<!--Example 2: Dynamic List Creation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List Creation</title>
+    <style>
+        #itemList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #itemList li {
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic List Creation</h1>
+    <input type="text" id="itemInput" placeholder="Add a new item">
+    <button onclick="addItem()">Add Item</button>
+    <ul id="itemList"></ul>
+
+    <script>
+        function addItem() {
+            const input = document.getElementById('itemInput');
+            const itemText = input.value.trim();
+            if (itemText) {
+                const li = document.createElement('li');
+                li.textContent = itemText;
+                document.getElementById('itemList').appendChild(li);
+                input.value = ''; // Clear the input field
+            } else {
+                alert('Please enter an item.');
+            }
+        }
+    </script>
+</body>
+</html>

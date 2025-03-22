@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title>JavaScript program to calculate multiplication and division of two numbers </title>
+<style>
+  body {
+    margin: 30px;
+    }
+    form{
+        background-color: rgb(99, 99, 241);
+        border: 2px solid black;
+        border-radius: 2px;
+        width: 300px;
+        margin: 100px;
+        padding: 20px;
+    }
+    input,p{
+        margin: 5px;
+    }
+</style> 
+</head>
+<body>
+<form>
+1st Number : <input type="number" id="firstNumber" /><br>
+2nd Number: <input type="number" id="secondNumber" /><br>
+<input type="button" onClick="AddBy()" Value="Add" />
+<input type="button" onClick="SubtractBy()" Value="Subtract" />
+<input type="button" onClick="multiplyBy()" Value="Multiply" />
+<input type="button" onClick="divideBy()" Value="Divide" /><br>
+<input type="button" onClick="getFactorial()" Value="fact" /><br>
+The Result is : <br>
+<p id = "result"></p>
+</form>
+</body>
+<script>
+function AddBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = parseFloat(num1)+parseFloat(num2);
+}
+function SubtractBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 - num2;
+}
+function multiplyBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 * num2;
+}
+function divideBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 / num2;
+}
+
+function getFactorial() {
+    num1 = document.getElementById("firstNumber").value;
+    document.getElementById("result").innerHTML = fact(num1);
+}
+
+function fact(num)
+{
+  if(num===0)
+  {
+    return 1;
+  }
+  else
+  {
+    return num*fact(num-1);
+  }
+}
+</script>
+</html>

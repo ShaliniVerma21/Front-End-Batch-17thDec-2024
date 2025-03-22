@@ -1,0 +1,31 @@
+<!-- Example-1 : Add and Remove Elements-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Remove Elements</title>
+</head>
+<body>
+    <button type="button" onclick="addItem()">Add Item</button>
+    <button type="button" onclick="removeItem()">Remove Last Item</button>
+    <ul id="itemList"></ul>
+
+    <script>
+        function addItem() {
+            const li = document.createElement('li');
+            li.textContent = 'New Item ' + (document.getElementById('itemList').children.length + 1);
+            document.getElementById('itemList').appendChild(li);
+        }
+
+        function removeItem() {
+            const list = document.getElementById('itemList');
+            if (list.children.length > 0) {
+                list.removeChild(list.lastChild);
+            } else {
+                alert('No items to remove!');
+            }
+        }
+    </script>
+</body>
+</html>
