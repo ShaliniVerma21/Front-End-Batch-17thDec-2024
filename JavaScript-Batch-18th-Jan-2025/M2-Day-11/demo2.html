@@ -1,0 +1,38 @@
+<!--
+Example 2: JSON Parsing with Error Handling
+to handle errors that may occur during JSON parsing.
+
+JSON : 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Parsing Example</title>
+</head>
+<body>
+    <h1>JSON Parsing Example</h1>
+    <script>
+        function parseJSON(jsonString) {
+            try {
+                const result = JSON.parse(jsonString);
+                console.log("Parsed JSON:", result);
+                return result;
+            } catch (error) {
+                console.error("Invalid JSON string:", error.message);
+                return null; // Return null or handle the error as needed
+            } finally {
+                console.log("JSON parsing attempted.");
+            }
+        }
+
+        const validJSON = '{"name": "Alice", "age": 25}';
+        parseJSON(validJSON); // Parsed JSON: { name: 'Alice', age: 25 }
+
+        const invalidJSON = '{"name": "Alice", "age": 25'; // Missing closing brace
+        parseJSON(invalidJSON); // Invalid JSON string: Unexpected end of JSON input
+    </script>
+</body>
+</html>

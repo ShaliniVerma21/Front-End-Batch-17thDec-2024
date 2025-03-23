@@ -1,0 +1,99 @@
+/*
+The Browser Object Model (BOM) is used to interact with the browser, 
+including:
+
+Window Object: Accessing properties and methods of the window.
+Document Object: Manipulating the DOM.
+Navigator Object: Accessing browser information.
+Location Object: Accessing and manipulating the URL.
+History Object: Navigating through the browser history.
+
+
+Example: Comprehensive BOM Implementation
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Browser Object Model Example</h1>
+    <button id="showInfo">Show Browser Info</button>
+    <button id="changeTitle">Change Document Title</button>
+    <button id="navigateBack">Go Back</button>
+    <button id="navigateForward">Go Forward</button>
+    <button id="reloadPage">Reload Page</button>
+    <button id="openNewWindow">Open New Window</button>
+    
+    <div id="info"></div>
+
+    <script>
+        // Function to show browser information
+        function showBrowserInfo() {
+            const infoDiv = document.getElementById('info');
+            const userAgent = navigator.userAgent;
+            const browserName = navigator.appName;
+            const browserVersion = navigator.appVersion;
+            const platform = navigator.platform;
+
+            infoDiv.innerHTML = `
+                <h2>Browser Information</h2>
+                <p><strong>User Agent:</strong> ${userAgent}</p>
+                <p><strong>Browser Name:</strong> ${browserName}</p>
+                <p><strong>Browser Version:</strong> ${browserVersion}</p>
+                <p><strong>Platform:</strong> ${platform}</p>
+                <p><strong>Current URL:</strong> ${window.location.href}</p>
+            `;
+        }
+
+        // Function to change the document title
+        function changeDocumentTitle() {
+            const newTitle = prompt("Enter a new title for the document:", document.title);
+            if (newTitle) {
+                document.title = newTitle;
+                alert(`Document title changed to: ${newTitle}`);
+            }
+        }
+
+        // Function to navigate back in history
+        function navigateBack() {
+            window.history.back();
+        }
+
+        // Function to navigate forward in history
+        function navigateForward() {
+            window.history.forward();
+        }
+
+        // Function to reload the page
+        function reloadPage() {
+            window.location.reload();
+        }
+
+        // Function to open a new window
+        function openNewWindow() {
+            window.open('https://www.example.com', '_blank', 'width=600,height=400');
+        }
+
+        // Event listeners for buttons
+        document.getElementById('showInfo').addEventListener('click', showBrowserInfo);
+        document.getElementById('changeTitle').addEventListener('click', changeDocumentTitle);
+        document.getElementById('navigateBack').addEventListener('click', navigateBack);
+        document.getElementById('navigateForward').addEventListener('click', navigateForward);
+        document.getElementById('reloadPage').addEventListener('click', reloadPage);
+        document.getElementById('openNewWindow').addEventListener('click', openNewWindow);
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        #mouse-over-me {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        #mouse-over-me:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+    <button id="click-me">Click me!</button>
+    <input id="input-field" type="text" placeholder="Type something...">
+    <div id="mouse-over-me">Mouse over me!</div>
+    <select id="select-me">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+    </select>
+
+    <script>
+        function addEventListeners() {
+            // Get elements
+            const button = document.getElementById('click-me');
+            const inputField = document.getElementById('input-field');
+            const mouseOverDiv = document.getElementById('mouse-over-me');
+            const selectMe = document.getElementById('select-me');
+
+            // Mouse events
+            button.addEventListener('click', () => {
+                alert('Button clicked!');
+            });
+
+            button.addEventListener('dblclick', () => {
+                alert('Button double-clicked!');
+            });
+
+            button.addEventListener('mousedown', () => {
+                console.log('Button mouse down!');
+            });
+
+            button.addEventListener('mouseup', () => {
+                console.log('Button mouse up!');
+            });
+
+            mouseOverDiv.addEventListener('mouseover', () => {
+                console.log('Mouse over div!');
+            });
+
+            mouseOverDiv.addEventListener('mouseout', () => {
+                console.log('Mouse out of div!');
+            });
+
+            mouseOverDiv.addEventListener('mousemove', () => {
+                console.log('Mouse moving over div!');
+            });
+
+            // Keyboard events
+            document.addEventListener('keydown', (event) => {
+                console.log('Key down:', event.key);
+            });
+
+            document.addEventListener('keyup', (event) => {
+                console.log('Key up:', event.key);
+            });
+
+            // Form events
+            inputField.addEventListener('input', () => {
+                console.log('Input field changed:', inputField.value);
+            });
+
+            inputField.addEventListener('focus', () => {
+                console.log('Input field focused!');
+            });
+
+            inputField.addEventListener('blur', () => {
+                console.log('Input field blurred!');
+            });
+
+            selectMe.addEventListener('change', () => {
+                console.log('Select changed:', selectMe.value);
+            });
+
+            // Window/Document events
+            window.addEventListener('load', () => {
+                console.log('Window loaded!');
+            });
+
+            window.addEventListener('unload', () => {
+                console.log('Window unloading!');
+            });
+
+            window.addEventListener('resize', () => {
+                console.log('Window resized!');
+            });
+
+            window.addEventListener('scroll', () => {
+                console.log('Window scrolled!');
+            });
+
+            window.addEventListener('beforeunload', (event) => {
+                event.preventDefault();
+                console.log('Window about to unload!');
+                event.returnValue = 'Are you sure you want to leave?'; // For modern browsers
+            });
+        }
+
+        // Initialize event listeners
+        addEventListeners();
+    </script>
+</body>
+</html>

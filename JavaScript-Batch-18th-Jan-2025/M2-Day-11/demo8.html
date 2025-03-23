@@ -1,0 +1,122 @@
+/*
+The document object represents the whole html document.
+
+When html document is loaded in the browser, it becomes a document object. It is the root element that represents the html document. It has properties and methods. By the help of document object, we can add dynamic content to our web page.
+Document Object Model (DOM), includes:
+
+Creating and Appending Elements
+Modifying Element Attributes and Styles
+Handling Events
+Removing Elements
+Traversing the DOM
+
+
+Example: Comprehensive DOM Implementation
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #itemList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #itemList li {
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Document Object Model Example</h1>
+    
+    <input type="text" id="itemInput" placeholder="Add a new item">
+    <button id="addItemButton">Add Item</button>
+    
+    <h2>Item List</h2>
+    <ul id="itemList"></ul>
+
+    <h2>Change Item Style</h2>
+    <input type="text" id="highlightInput" placeholder="Item text to highlight">
+    <button id="highlightButton">Highlight Item</button>
+
+    <h2>Remove Item</h2>
+    <input type="text" id="removeInput" placeholder="Item text to remove">
+    <button id="removeButton">Remove Item</button>
+
+    <script>
+        // Function to add a new item to the list
+        function addItem() {
+            const input = document.getElementById('itemInput');
+            const itemText = input.value.trim();
+            if (itemText) {
+                const li = document.createElement('li');
+                li.textContent = itemText;
+
+                // Create a remove button for each item
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = function() {
+                    removeItem(li);
+                };
+
+                li.appendChild(removeButton);
+                document.getElementById('itemList').appendChild(li);
+                input.value = ''; // Clear the input field
+            } else {
+                alert('Please enter an item.');
+            }
+        }
+
+        // Function to remove an item from the list
+        function removeItem(item) {
+            document.getElementById('itemList').removeChild(item);
+        }
+
+        // Function to highlight an item in the list
+        function highlightItem() {
+            const highlightText = document.getElementById('highlightInput').value.trim();
+            const items = document.getElementsByTagName('li');
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].innerText.includes(highlightText)) {
+                    items[i].classList.toggle('highlight');
+                }
+            }
+        }
+
+        // Event listeners for buttons
+        document.getElementById('addItemButton').addEventListener('click', addItem);
+        document.getElementById('highlightButton').addEventListener('click', highlightItem);
+
+        // Function to remove an item by text
+        function removeItemByText() {
+            const removeText = document.getElementById('removeInput').value.trim();
+            const items = document.getElementsByTagName('li');
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].innerText.includes(removeText)) {
+                    removeItem(items[i]);
+                    break; // Remove only the first matching item
+                }
+            }
+        }
+
+        // Event listener for the remove button
+        document.getElementById('removeButton').addEventListener('click', removeItemByText);
+    </script>
+</body>
+</html>

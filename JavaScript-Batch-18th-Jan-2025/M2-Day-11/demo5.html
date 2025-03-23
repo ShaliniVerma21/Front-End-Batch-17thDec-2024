@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+        <label for="terms">Terms and Conditions:</label>
+        <input type="checkbox" id="terms" name="terms"><br><br>
+        <input type="submit" value="Submit">
+      </form>  
+</body>
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var phone = document.getElementById("phone").value;
+  var terms = document.getElementById("terms").checked;
+
+  // Required Field Validation
+  if (name == "" || email == "" || password == "" || phone == "") {
+    alert("Please fill in all required fields");
+    event.preventDefault();
+    return;
+  }
+
+  // Email Validation
+  var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address");
+    event.preventDefault();
+    return;
+  }
+
+  // Password Validation
+  var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+  if (!passwordRegex.test(password)) {
+    alert("Please enter a valid password");
+    event.preventDefault();
+    return;
+  }
+
+  // Phone Number Validation
+  var phoneRegex = /^\d{10}$/;
+  if (!phoneRegex.test(phone)) {
+    alert("Please enter a valid phone number");
+    event.preventDefault();
+    return;
+  }
+
+  // Checkbox Validation
+  if (!terms) {
+    alert("Please agree to the terms and conditions");
+    event.preventDefault();
+    return;
+  }
+});
+</script>
+</html>

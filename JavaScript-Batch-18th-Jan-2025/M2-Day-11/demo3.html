@@ -1,0 +1,40 @@
+<!--
+Example 3: Custom Error Handling
+to create and throw a custom error.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Error Handling</title>
+</head>
+<body>
+    <h1>Custom Error Handling</h1>
+    <script>
+        class CustomError extends Error {
+            constructor(message) {
+                super(message);
+                this.name = "CustomError";
+            }
+        }
+
+        function validateInput(input) {
+            try {
+                if (input < 0) {
+                    throw new CustomError("Input must be a non-negative number");
+                }
+                console.log("Input is valid:", input);
+            } catch (error) {
+                console.error(`${error.name}: ${error.message}`);
+            } finally {
+                console.log("Validation attempted.");
+            }
+        }
+
+        validateInput(5); // Input is valid: 5
+        validateInput(-3); // CustomError: Input must be a non-negative number
+    </script>
+</body>
+</html>
