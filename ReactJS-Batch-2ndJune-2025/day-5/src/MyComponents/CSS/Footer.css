@@ -1,0 +1,51 @@
+.footer {
+    width: 100%;
+    background-color: #b4b2b2;
+    padding: 50px;
+    text-align: center;
+}
+
+.footer h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    margin: 20px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ff6347; /* Tomato color */
+}
+
+.subscribe-form {
+    margin-top: 20px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscribe-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #e5533d; /* Darker tomato color */
+}

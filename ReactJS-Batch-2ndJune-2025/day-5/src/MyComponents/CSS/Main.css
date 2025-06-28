@@ -1,0 +1,25 @@
+.main {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.dish-card {
+    width: 18rem;
+    transition: transform 0.3s;
+}
+
+.dish-card:hover {
+    transform: scale(1.05);
+}
