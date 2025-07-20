@@ -1,0 +1,24 @@
+.user{
+    background-color: #eca2a2;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    display:inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    border: 1px double #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover{
+        background-color: #333;
+    }
+}
